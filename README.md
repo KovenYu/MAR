@@ -1,4 +1,4 @@
-## MAR: Multilabel Reference Learning
+## MAR: MultilAbel Reference Learning
 ![](img/framework.png)
 
 This repo contains the source code for our CVPR'19 work
