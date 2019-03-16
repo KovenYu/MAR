@@ -9,13 +9,13 @@ In the following is an instruction to use the code
 to train and evaluate the MAR model on the [Market-1501](
 http://www.liangzheng.org/Project/project_reid.html) dataset.
 
-#### Prerequisites
+### Prerequisites
 1. [Pytorch 1.0.0](https://pytorch.org/)
 2. Python 3.6+
 3. Python packages: numpy, scipy, pyyaml/yaml, h5py
 4. [Optional] MATLAB, if you need to customize used datasets.
 
-#### Data preparation
+### Data preparation
 (If you simply want to run the demo code without further modification,
 you might skip this step by downloading all required data from
 [BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw) with
@@ -62,10 +62,10 @@ Again, the processed MSMT17 is available
 [here](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw).
      
 
-#### Run the code
+### Run the code
 
 Please enter the main folder, and run
-```python
+```bash
 python src/main.py --gpu 0,1,2,3 --save_path runs/debug
 ```
 where "0,1,2,3" specifies your gpu IDs.
@@ -75,7 +75,7 @@ Please also note that since I load the whole datasets into cpu memory
 to cut down IO overhead,
 you need at least 40G cpu memory. Hence I recommend you run it on a server.
 
-#### Reference
+### Reference
 
 If you find our work helpful in your research,
 please kindly cite our paper:
