@@ -1,6 +1,5 @@
 import torch.nn as nn
 import torch.nn.functional as F
-import torch
 import math
 import torch.utils.model_zoo as model_zoo
 
@@ -70,10 +69,6 @@ class ResNet(nn.Module):
         self.layer3 = self._make_layer(block, 256, layers[2], stride=2)
         self.layer4 = self._make_layer(block, 512, layers[3], stride=2, is_last=True)
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
-        # self.dropout = nn.Dropout()
-        # self.down_fc = nn.Linear(512 * block.expansion, 256, bias=False)
-        # self.down_bn = nn.BatchNorm1d(256)
-        # self.fc = AngleLinear(256, num_classes)
         self.fc = nn.Linear(2048, num_classes, bias=False)
 
         for m in self.modules():
@@ -167,70 +162,6 @@ class ResNetBasicblock(nn.Module):
             residual = residual[:, :basicblock.size()[1], :, :]
         output = self.output_activation(residual + basicblock)
         return output
-
-
-class SpatialTile(nn.Module):
-    def __init__(self, tile_size):
-        super(SpatialTile, self).__init__()
-        self.tile_size = tile_size
-
-    def forward(self, x):
-        return x.expand(-1, -1, self.tile_size[0], self.tile_size[1])
-
-
-class AngleLinear(nn.Module):
-    def __init__(self, in_features, out_features):
-        super(AngleLinear, self).__init__()
-        self.in_features = in_features
-        self.out_features = out_features
-        self.weight = nn.Parameter(torch.Tensor(self.in_features, self.out_features))
-        self.weight.data.uniform_(-1, 1).renorm_(2, 1, 1e-5).mul_(1e5)
-
-    def forward(self, x):
-        w = self.weight
-        ww = w.renorm(2, 1, 1e-5).mul(1e5)
-        xlen = x.pow(2).sum(1).pow(0.5)
-        wlen = ww.pow(2).sum(0).pow(0.5)
-        cos = x.mm(ww) / xlen.view(-1, 1) / wlen.view(1, -1)
-        pred = cos * xlen.view(-1, 1)
-        return pred
-
-
-def make_cascade_blocks(in_channels, n, norm='batch'):
-    """
-    make n cascade residual blocks, each of which has identical structure.
-    :param in_channels:
-    :param n:
-    :return:
-    """
-    layers = [ResNetBasicblock(in_channels, in_channels, norm=norm) for _ in range(n)]
-    cascade_blocks = nn.Sequential(*layers)
-    return cascade_blocks
-
-
-def make_varychannel_resblk(chs):
-    layers = []
-    for in_ch, out_ch in zip(chs[:-1], chs[1:]):
-        residual_transform = nn.Sequential(nn.Conv2d(in_ch, out_ch, kernel_size=1, stride=1, bias=False),
-                                           nn.BatchNorm2d(out_ch))
-        layers.append(ResNetBasicblock(in_ch, out_ch, stride=1, residual_transform=residual_transform))
-    return nn.Sequential(*layers)
-
-
-def init_params(m):
-    """
-    initialize a module's parameters
-    if conv2d or convT2d, using he normalization
-    if bn set weight to 1 and bias to 0
-    :param m:
-    :return:
-    """
-    if isinstance(m, nn.Conv2d) or isinstance(m, nn.ConvTranspose2d):
-        n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
-        m.weight.data.normal_(0, math.sqrt(2. / n))
-    elif isinstance(m, nn.BatchNorm2d):
-        m.weight.data.fill_(1)
-        m.bias.data.zero_()
 
 
 def resnet50(pretrained=False, **kwargs):

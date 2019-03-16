@@ -2,11 +2,6 @@ from trainers import *
 import time
 import torch.backends.cudnn as cudnn
 cudnn.benchmark = True
-import sys
-sys.path.append("pycharm-debug-py3k.egg")
-import pydevd
-pydevd.settrace('172.18.218.16', port=8008, stdoutToServer=True, stderrToServer=True)
-
 
 def main():
     opts = BaseOptions()

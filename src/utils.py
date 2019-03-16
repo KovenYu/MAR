@@ -563,26 +563,6 @@ def get_transfer_dataloaders(source, target, img_size, crop_size, padding, batch
     return source_loader, target_loader, gallery_loader, probe_loader
 
 
-def construct_pairwise_similarity_matrix(X, Y, sigma2=1, metric='euclidean'):
-    """ construct a similarity matrix M, where Mij is the similarity between Xi and Yj
-    defined as exp(-dist(Xi, Yj)^2/sigma2)
-    :param X: 2d tensor/array, shape=(num_instances, dimension)
-    :param Y: 2d tensor/array, shape=(num_instances, dimension)
-    :param sigma2: scale factor in gaussian kernel
-    :param metric: the metric used for computing the distances
-    :return:
-    """
-    if len(X.shape) == 1:
-        X = [X]
-    if len(Y.shape) == 1:
-        Y = [Y]
-    X = np.array(X)
-    Y = np.array(Y)
-    dist = cdist(X, Y, metric=metric)
-    similarity_matrix = np.exp(-dist ** 2 / sigma2)
-    return similarity_matrix
-
-
 def parse_pretrained_checkpoint(checkpoint, num_classes, fc_layer_name='fc'):
     """
     :param checkpoint: OrderedDict (state_dict) or a tuple (checkpoint)
