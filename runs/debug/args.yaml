@@ -1,0 +1,20 @@
+## Base options
+epochs: 20
+batch_size: 368
+print_freq: 100
+pretrain_path: data/pretrained.pth
+img_size: !!python/tuple [384, 128]
+crop_size: !!python/tuple [384, 128]
+padding: 7
+lr: !!python/float 2e-4
+wd: !!python/float 2.5e-2
+scala_ce: !!python/float 30
+ml_path: data/ml_Market.dat
+
+source: MSMT17
+target: Market
+lamb_1: !!python/float 2e-4
+lamb_2: !!python/float 50
+beta: !!python/float 0.2
+mining_ratio: !!python/float 0.005
+margin: !!python/float 1
