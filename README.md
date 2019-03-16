@@ -3,7 +3,9 @@
 
 This repo contains the source code for our CVPR'19 work
 [Unsupervised person re-identification by soft multilabel learning](
-https://kovenyu.com/publication/2019-cvpr-mar/).
+https://kovenyu.com/publication/2019-cvpr-mar/) 
+(Please find the paper as well as the supplementary material in this 
+[project page](https://kovenyu.com/publication/2019-cvpr-mar/)).
 Our implementation is based on [Pytorch](https://pytorch.org/).
 In the following is an instruction to use the code
 to train and evaluate the MAR model on the [Market-1501](
@@ -46,7 +48,7 @@ Again, the processed Market-1501 and DukeMTMC-reID are available [here](https://
 
 3. Auxiliary (source) dataset
 
-    Download the [MSMT17](https://http://www.pkuvmc.com/publications/msmt17.html) 
+    Download the [MSMT17](http://www.pkuvmc.com/publications/msmt17.html) 
 dataset, and unzip it into */data*. After this step, you should have a folder structure:
     - data
         - MSMT17_V1
