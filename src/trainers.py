@@ -184,6 +184,8 @@ class ReidTrainer(Trainer):
             multilabels = F.softmax(sim * self.args.scala_ce, dim=1)
             ml_np = multilabels.cpu().numpy()
             pairwise_agreements = 1 - pdist(ml_np, 'minkowski', p=1)/2
+            self.logger.print_log('saving computed ml to {}'.format(self.args.ml_path))
+            torch.save((multilabels, views, pairwise_agreements), self.args.ml_path)
         log_multilabels = torch.log(multilabels)
         self.cml_loss.init_centers(log_multilabels, views)
         self.logger.print_log('initializing centers done.')

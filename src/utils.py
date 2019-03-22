@@ -435,9 +435,7 @@ def eval_cmc_map(dist, gallery_labels, probe_labels, gallery_views=None,
 
 def save_checkpoint(trainer, epoch, save_path, is_best=False):
     logger = trainer.logger
-    recorder = trainer.recorder
     trainer.logger = None
-    trainer.recorder = None
     if not os.path.isdir(os.path.dirname(save_path)):
         os.mkdir(os.path.dirname(save_path))
     torch.save((trainer, epoch), save_path)
@@ -445,7 +443,6 @@ def save_checkpoint(trainer, epoch, save_path, is_best=False):
         best_path = save_path + '.best'
         torch.save((trainer, epoch), best_path)
     trainer.logger = logger
-    trainer.recorder = recorder
 
 
 def load_checkpoint(args, logger):
