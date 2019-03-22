@@ -1,21 +1,23 @@
-## MAR: Multilabel Reference Learning
+## MAR: MultilAbel Reference Learning
 ![](img/framework.png)
 
 This repo contains the source code for our CVPR'19 work
 [Unsupervised person re-identification by soft multilabel learning](
-https://kovenyu.com/publication/2019-cvpr-mar/).
+https://kovenyu.com/publication/2019-cvpr-mar/) 
+(Please find the paper as well as the supplementary material in this 
+[project page](https://kovenyu.com/publication/2019-cvpr-mar/)).
 Our implementation is based on [Pytorch](https://pytorch.org/).
 In the following is an instruction to use the code
 to train and evaluate the MAR model on the [Market-1501](
 http://www.liangzheng.org/Project/project_reid.html) dataset.
 
-#### Prerequisites
+### Prerequisites
 1. [Pytorch 1.0.0](https://pytorch.org/)
 2. Python 3.6+
 3. Python packages: numpy, scipy, pyyaml/yaml, h5py
 4. [Optional] MATLAB, if you need to customize used datasets.
 
-#### Data preparation
+### Data preparation
 (If you simply want to run the demo code without further modification,
 you might skip this step by downloading all required data from
 [BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw) with
@@ -46,7 +48,7 @@ Again, the processed Market-1501 and DukeMTMC-reID are available [here](https://
 
 3. Auxiliary (source) dataset
 
-    Download the [MSMT17](https://http://www.pkuvmc.com/publications/msmt17.html) 
+    Download the [MSMT17](http://www.pkuvmc.com/publications/msmt17.html) 
 dataset, and unzip it into */data*. After this step, you should have a folder structure:
     - data
         - MSMT17_V1
@@ -62,10 +64,10 @@ Again, the processed MSMT17 is available
 [here](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw).
      
 
-#### Run the code
+### Run the code
 
 Please enter the main folder, and run
-```python
+```bash
 python src/main.py --gpu 0,1,2,3 --save_path runs/debug
 ```
 where "0,1,2,3" specifies your gpu IDs.
@@ -75,7 +77,7 @@ Please also note that since I load the whole datasets into cpu memory
 to cut down IO overhead,
 you need at least 40G cpu memory. Hence I recommend you run it on a server.
 
-#### Reference
+### Reference
 
 If you find our work helpful in your research,
 please kindly cite our paper:
