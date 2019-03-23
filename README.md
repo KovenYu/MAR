@@ -28,7 +28,7 @@ and put all of them into */data/*)
 
     Please find the pretrained model (pretrained using softmax loss on MSMT17) 
 [here](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw) (password: tih8).
-After downloading *pretrained.pth*, please put it into */data/*.
+After downloading *pretrained_weight.pth*, please put it into */data/*.
 
 2. Target dataset
 
