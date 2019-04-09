@@ -26,8 +26,8 @@ and put all of them into */data/*)
 
 1. Pretrained model
 
-    Please find the pretrained model (pretrained using softmax loss on MSMT17) 
-[here](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw) (password: tih8).
+    Please find the pretrained model (pretrained using softmax loss on MSMT17) in
+[BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw) (password: tih8) or [GoogleDrive](https://drive.google.com/file/d/1kkktMdezg6oyUuhrXRKuQb6lFqPROj8-/view?usp=sharing).
 After downloading *pretrained_weight.pth*, please put it into */data/*.
 
 2. Target dataset
@@ -44,7 +44,7 @@ a folder structure:
 
     Then run [/data/construct_dataset_Market.m](/data/construct_dataset_Market.m)
     in MATLAB. If you prefer to use another dataset, just modify the MATLAB code accordingly.
-Again, the processed Market-1501 and DukeMTMC-reID are available [here](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw).
+Again, the processed Market-1501 and DukeMTMC-reID are available in [BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw).
 
 3. Auxiliary (source) dataset
 
@@ -60,8 +60,8 @@ dataset, and unzip it into */data*. After this step, you should have a folder st
 
     Then run [/data/construct_dataset_MSMT17.m](/data/construct_dataset_MSMT17.m) in MATLAB.
 If you prefer to use another dataset, just modify the MATLAB code accordingly.
-Again, the processed MSMT17 is available 
-[here](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw).
+Again, the processed MSMT17 is available in
+[BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw).
      
 
 ### Run the code
