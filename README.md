@@ -86,7 +86,7 @@ you need at least 40G cpu memory. Hence I recommend you run it on a server.
 
 ### Main results
 <img src="img/sota_market.png" width="400"/>
-<img src="img/sota_duke.png" width="350"/>
+<img src="img/sota_duke.png" width="400"/>
 
 ### Reference
 
