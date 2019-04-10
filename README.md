@@ -1,6 +1,6 @@
 ## [MAR: MultilAbel Reference Learning](https://kovenyu.com/papers/2019_CVPR_MAR.pdf)
 
-<img src="img/intro.png" width="400"/><img src="img/fig3.png" width="400"/>
+<img src="img/intro.png" width="400"/>  <img src="img/fig3.png" width="450"/>
 
 This repo contains the source code for our CVPR'19 work
 **Unsupervised person re-identification by soft multilabel learning** 
@@ -78,6 +78,8 @@ python src/main.py --gpu 0,1,2,3 --save_path runs/debug
 where "0,1,2,3" specifies your gpu IDs.
 If you are using gpus with 12G memory, you need 4 gpus to run 
 in the default setting (batchsize=368).
+If you set a small batch size, please do not forget to lower the learning rate as the gradient
+would be stronger for a smaller batch size.
 Please also note that since I load the whole datasets into cpu memory
 to cut down IO overhead,
 you need at least 40G cpu memory. Hence I recommend you run it on a server.
