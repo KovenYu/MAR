@@ -1,15 +1,19 @@
-## MAR: MultilAbel Reference Learning
-![](img/framework.png)
+## [MAR: MultilAbel Reference Learning](https://kovenyu.com/papers/2019_CVPR_MAR.pdf)
+
+<img src="img/intro.png" width="400"/><img src="img/fig3" width="400"/>
 
 This repo contains the source code for our CVPR'19 work
-[Unsupervised person re-identification by soft multilabel learning](
-https://kovenyu.com/publication/2019-cvpr-mar/) 
-(Please find the paper as well as the supplementary material in this 
-[project page](https://kovenyu.com/publication/2019-cvpr-mar/)).
+**Unsupervised person re-identification by soft multilabel learning** 
+(the [paper](https://kovenyu.com/papers/2019_CVPR_MAR.pdf) 
+and the [supplementary material](https://kovenyu.com/papers/2019_CVPR_MAR_supp.pdf)
+is available).
 Our implementation is based on [Pytorch](https://pytorch.org/).
 In the following is an instruction to use the code
 to train and evaluate the MAR model on the [Market-1501](
 http://www.liangzheng.org/Project/project_reid.html) dataset.
+
+![](img/framework.png)
+
 
 ### Prerequisites
 1. [Pytorch 1.0.0](https://pytorch.org/)
@@ -44,7 +48,8 @@ a folder structure:
 
     Then run [/data/construct_dataset_Market.m](/data/construct_dataset_Market.m)
     in MATLAB. If you prefer to use another dataset, just modify the MATLAB code accordingly.
-Again, the processed Market-1501 and DukeMTMC-reID are available in [BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw).
+The processed Market-1501 and DukeMTMC-reID are available in [BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw)
+and [GoogleDrive](https://drive.google.com/open?id=1VnJF6Hsj7oV4Bb5nnP7SoJKh2ID8xhD6).
 
 3. Auxiliary (source) dataset
 
@@ -76,6 +81,10 @@ in the default setting (batchsize=368).
 Please also note that since I load the whole datasets into cpu memory
 to cut down IO overhead,
 you need at least 40G cpu memory. Hence I recommend you run it on a server.
+
+### Main results
+<img src="img/sota_market.png" width="400"/><img src="img/sota_duke.png" width="400"/>
+<img src="img/ablation.png" width="400"/><img src="img/qualitative.png" width="400"/>
 
 ### Reference
 
