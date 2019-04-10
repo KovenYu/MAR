@@ -1,6 +1,6 @@
 ## [MAR: MultilAbel Reference Learning](https://kovenyu.com/papers/2019_CVPR_MAR.pdf)
 
-<img src="img/intro.png" width="400"/><img src="img/fig3" width="400"/>
+<img src="img/intro.png" width="400"/><img src="img/fig3.png" width="400"/>
 
 This repo contains the source code for our CVPR'19 work
 **Unsupervised person re-identification by soft multilabel learning** 
@@ -84,7 +84,6 @@ you need at least 40G cpu memory. Hence I recommend you run it on a server.
 
 ### Main results
 <img src="img/sota_market.png" width="400"/><img src="img/sota_duke.png" width="400"/>
-<img src="img/ablation.png" width="400"/><img src="img/qualitative.png" width="400"/>
 
 ### Reference
 
