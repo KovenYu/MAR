@@ -1,3 +1,6 @@
+### update on 17th June: illustration for soft multilabel learning loss
+![](illustration_consistency_loss.png)
+
 ## [MAR: MultilAbel Reference Learning](https://kovenyu.com/papers/2019_CVPR_MAR.pdf)
 
 <img src="img/intro.png" width="400"/>  <img src="img/fig3.png" width="450"/>
