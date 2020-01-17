@@ -110,5 +110,6 @@ bib:
 }
 ```
 
-If you have any problem/question, please feel free to contact me at xKoven@gmail.com
-or open an issue.
+### Contact
+If you have any problem please email me at xKoven@gmail.com
+I may not look at issues.
