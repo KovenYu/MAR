@@ -1,5 +1,7 @@
+<!---
 ### update on 17th June: illustration for soft multilabel learning loss
 ![](illustration_consistency_loss.png)
+-->
 
 ## [MAR: MultilAbel Reference Learning](https://kovenyu.com/papers/2019_CVPR_MAR.pdf)
 
@@ -25,11 +27,13 @@ http://www.liangzheng.org/Project/project_reid.html) dataset.
 4. [Optional] MATLAB, if you need to customize used datasets.
 
 ### Data preparation
-(If you simply want to run the demo code without further modification,
+If you simply want to run the demo code without further modification,
 you might skip this step by downloading all required data from
 [BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw) with
 password "tih8",
-and put all of them into */data/*)
+and put all of them into */data/*.
+Alternatively, you can find processed MSMT17 [here](https://mega.nz/#!vANGUKBC!uz0fx1DiijEEwblAmMr-h3KYuFR32FaAcggsMPrU8ck)
+and Market/Duke [here](https://drive.google.com/open?id=1VnJF6Hsj7oV4Bb5nnP7SoJKh2ID8xhD6).
 
 1. Pretrained model
 
@@ -69,7 +73,8 @@ dataset, and unzip it into */data*. After this step, you should have a folder st
     Then run [/data/construct_dataset_MSMT17.m](/data/construct_dataset_MSMT17.m) in MATLAB.
 If you prefer to use another dataset, just modify the MATLAB code accordingly.
 Again, the processed MSMT17 is available in
-[BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw).
+[BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw)
+and [Mega](https://mega.nz/#!vANGUKBC!uz0fx1DiijEEwblAmMr-h3KYuFR32FaAcggsMPrU8ck).
      
 
 ### Run the code
