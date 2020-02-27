@@ -2,7 +2,7 @@
 epochs: 20
 batch_size: 368
 print_freq: 100
-pretrain_path: data/pretrained_weight.pth
+pretrain_path: data/pretrained_MSMT17.pth
 img_size: !!python/tuple [384, 128]
 crop_size: !!python/tuple [384, 128]
 padding: 7
