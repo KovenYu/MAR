@@ -39,7 +39,7 @@ and Market/Duke [here](https://drive.google.com/open?id=1VnJF6Hsj7oV4Bb5nnP7SoJK
 
     Please find the pretrained model (pretrained using softmax loss on MSMT17) in
 [BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw) (password: tih8) or [GoogleDrive](https://drive.google.com/file/d/1kkktMdezg6oyUuhrXRKuQb6lFqPROj8-/view?usp=sharing).
-After downloading *pretrained_weight.pth*, please put it into */data/*.
+After downloading *pretrained_MSMT17.pth*, please put it into */data/*.
 
 2. Target dataset
 
