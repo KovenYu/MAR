@@ -32,8 +32,7 @@ you might skip this step by downloading all required data from
 [BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw) with
 password "tih8",
 and put all of them into */data/*.
-Alternatively, you can find processed MSMT17 [here](https://mega.nz/#!vANGUKBC!uz0fx1DiijEEwblAmMr-h3KYuFR32FaAcggsMPrU8ck)
-and Market/Duke [here](https://drive.google.com/open?id=1VnJF6Hsj7oV4Bb5nnP7SoJKh2ID8xhD6).
+Alternatively, you can find processed MSMT17 [here](https://mega.nz/#!vANGUKBC!uz0fx1DiijEEwblAmMr-h3KYuFR32FaAcggsMPrU8ck).
 
 1. Pretrained model
 
@@ -55,8 +54,7 @@ a folder structure:
 
     Then run [/data/construct_dataset_Market.m](/data/construct_dataset_Market.m)
     in MATLAB. If you prefer to use another dataset, just modify the MATLAB code accordingly.
-The processed Market-1501 and DukeMTMC-reID are available in [BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw)
-and [GoogleDrive](https://drive.google.com/open?id=1VnJF6Hsj7oV4Bb5nnP7SoJKh2ID8xhD6).
+The processed Market-1501 and DukeMTMC-reID are available in [BaiduPan](https://pan.baidu.com/s/1O0s_dJcbkku6T0MwlLQecw).
 
 3. Auxiliary (source) dataset
 
